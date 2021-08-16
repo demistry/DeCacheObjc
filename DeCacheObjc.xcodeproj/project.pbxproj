@@ -10,6 +10,11 @@
 		34E0EA3626CA279300B5902B /* DeCacheObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E0EA2C26CA279300B5902B /* DeCacheObjc.framework */; };
 		34E0EA3B26CA279300B5902B /* DeCacheObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0EA3A26CA279300B5902B /* DeCacheObjcTests.m */; };
 		34E0EA3D26CA279300B5902B /* DeCacheObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA2F26CA279300B5902B /* DeCacheObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E0EA4A26CA27FB00B5902B /* DeCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA4826CA27FB00B5902B /* DeCache.h */; };
+		34E0EA4B26CA27FB00B5902B /* DeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0EA4926CA27FB00B5902B /* DeCache.m */; };
+		34E0EA4F26CA281E00B5902B /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA4E26CA281E00B5902B /* Store.h */; };
+		34E0EA5626CA29A900B5902B /* LocalStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA5426CA29A900B5902B /* LocalStore.h */; };
+		34E0EA5726CA29A900B5902B /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0EA5526CA29A900B5902B /* LocalStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		34E0EA3526CA279300B5902B /* DeCacheObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeCacheObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E0EA3A26CA279300B5902B /* DeCacheObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeCacheObjcTests.m; sourceTree = "<group>"; };
 		34E0EA3C26CA279300B5902B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E0EA4826CA27FB00B5902B /* DeCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeCache.h; sourceTree = "<group>"; };
+		34E0EA4926CA27FB00B5902B /* DeCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeCache.m; sourceTree = "<group>"; };
+		34E0EA4E26CA281E00B5902B /* Store.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		34E0EA5426CA29A900B5902B /* LocalStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		34E0EA5526CA29A900B5902B /* LocalStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,11 @@
 			children = (
 				34E0EA2F26CA279300B5902B /* DeCacheObjc.h */,
 				34E0EA3026CA279300B5902B /* Info.plist */,
+				34E0EA4826CA27FB00B5902B /* DeCache.h */,
+				34E0EA4926CA27FB00B5902B /* DeCache.m */,
+				34E0EA4E26CA281E00B5902B /* Store.h */,
+				34E0EA5426CA29A900B5902B /* LocalStore.h */,
+				34E0EA5526CA29A900B5902B /* LocalStore.m */,
 			);
 			path = DeCacheObjc;
 			sourceTree = "<group>";
@@ -93,6 +108,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E0EA4F26CA281E00B5902B /* Store.h in Headers */,
+				34E0EA4A26CA27FB00B5902B /* DeCache.h in Headers */,
+				34E0EA5626CA29A900B5902B /* LocalStore.h in Headers */,
 				34E0EA3D26CA279300B5902B /* DeCacheObjc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E0EA4B26CA27FB00B5902B /* DeCache.m in Sources */,
+				34E0EA5726CA29A900B5902B /* LocalStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidemi.DeCacheObjc;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -375,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidemi.DeCacheObjc;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
