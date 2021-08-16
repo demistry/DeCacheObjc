@@ -6,8 +6,22 @@
 //
 
 #import "DeCache.h"
+#import "LocalStore.h"
 
+@interface DeCache ()
+@property (strong, nonnull) LocalStore *localStore;
+@end
+
+/// 
 @implementation DeCache
 
+-(instancetype) init
+{
+    self = [super init];
+    if (self) {
+        self.localStore = [[LocalStore alloc] init];
+    }
+    return self;
+}
 
 @end
