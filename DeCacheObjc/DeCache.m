@@ -15,21 +15,31 @@
 /// 
 @implementation DeCache
 
-+ (DeCache *)shared {
-    return [[DeCache shared] init];
-}
-
-+ (void)setInt {
-    
-}
-
--(instancetype) init
++ (DeCache*)shared
 {
-    self = [super init];
-    if (self) {
-        self.localStore = [[LocalStore alloc] init];
-    }
-    return self;
+    //Singleton instance
+    static DeCache *shared;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[self alloc] init];
+        shared.localStore = [[LocalStore alloc] init];
+    });
+    
+    return shared;
 }
+
++ (void)setIntegerValue {
+    NSLog(@"Integer value set");
+}
+
+//-(instancetype) init
+//{
+//    self = [super init];
+//    if (self) {
+//        self.localStore = [[LocalStore alloc] init];
+//    }
+//    return self;
+//}
 
 @end

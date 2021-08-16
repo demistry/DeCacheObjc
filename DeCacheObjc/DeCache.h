@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DeCache : NSObject
-+(DeCache *) shared;
-+(void) setInt;
++(nonnull instancetype) shared;
++(void) setIntegerValue;
 @end
 
 NS_ASSUME_NONNULL_END
