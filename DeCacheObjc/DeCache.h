@@ -6,12 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DeCache : NSObject
-
++(DeCache *) shared;
++(void) setInt;
 @end
 
 NS_ASSUME_NONNULL_END

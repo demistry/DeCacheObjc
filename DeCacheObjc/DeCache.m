@@ -15,6 +15,14 @@
 /// 
 @implementation DeCache
 
++ (DeCache *)shared {
+    return [[DeCache shared] init];
+}
+
++ (void)setInt {
+    
+}
+
 -(instancetype) init
 {
     self = [super init];

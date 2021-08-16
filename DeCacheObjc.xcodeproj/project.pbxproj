@@ -10,7 +10,7 @@
 		34E0EA3626CA279300B5902B /* DeCacheObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E0EA2C26CA279300B5902B /* DeCacheObjc.framework */; };
 		34E0EA3B26CA279300B5902B /* DeCacheObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0EA3A26CA279300B5902B /* DeCacheObjcTests.m */; };
 		34E0EA3D26CA279300B5902B /* DeCacheObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA2F26CA279300B5902B /* DeCacheObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34E0EA4A26CA27FB00B5902B /* DeCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA4826CA27FB00B5902B /* DeCache.h */; };
+		34E0EA4A26CA27FB00B5902B /* DeCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA4826CA27FB00B5902B /* DeCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E0EA4B26CA27FB00B5902B /* DeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0EA4926CA27FB00B5902B /* DeCache.m */; };
 		34E0EA4F26CA281E00B5902B /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA4E26CA281E00B5902B /* Store.h */; };
 		34E0EA5626CA29A900B5902B /* LocalStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E0EA5426CA29A900B5902B /* LocalStore.h */; };
@@ -356,6 +356,8 @@
 		34E0EA4126CA279300B5902B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A8SA62ZA26;
@@ -380,6 +382,8 @@
 		34E0EA4226CA279300B5902B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A8SA62ZA26;
