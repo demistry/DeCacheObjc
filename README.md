@@ -1,2 +1,2 @@
 # DeCacheObjc
-Simple caching framework written in Objective-C
+Simple KV store framework written in Objective-C
