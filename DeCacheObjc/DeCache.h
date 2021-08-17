@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DeCacheKey.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,16 +14,22 @@ NS_ASSUME_NONNULL_BEGIN
 +(nonnull instancetype) shared;
 
 +(void) saveString: (NSString*) value
-               key: (NSString*) key;
+               key: (id<DeCacheKey>) key;
 
 +(void) saveInt: (NSInteger) value
-               key: (NSString*) key;
+                key: (id<DeCacheKey>) key;
 
 +(void) saveBoolean: (BOOL) value
-               key: (NSString*) key;
+                key: (id<DeCacheKey>) key;
 
 +(void) saveFloat: (float) value
-               key: (NSString*) key;
+                key: (id<DeCacheKey>) key;
+
++(NSInteger) getInt:(id<DeCacheKey>) key;
+
++(NSString*) getString:(id<DeCacheKey>) key;
+
++(float) getFloat:(id<DeCacheKey>) key;
 @end
 
 NS_ASSUME_NONNULL_END

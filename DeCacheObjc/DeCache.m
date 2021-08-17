@@ -7,6 +7,7 @@
 
 #import "DeCache.h"
 #import "LocalStore.h"
+#import "DeCacheKey.h"
 
 @interface DeCache ()
 @property (strong, nonnull) LocalStore *localStore;
@@ -30,20 +31,33 @@
     return shared;
 }
 
-+(void) saveInt:(NSInteger)value key: (NSString*) key {
-    [[LocalStore shared] saveInt:value key:key];
++(void) saveInt:(NSInteger)value key:(id<DeCacheKey>)key {
+    
+    [[LocalStore shared] saveInt:value key:key.keyLiteral];
 }
 
-+ (void)saveBoolean:(BOOL)value key:(NSString*)key {
-    [[LocalStore shared] saveBoolean:value key:key];
++ (void)saveBoolean:(BOOL)value key:(id<DeCacheKey>)key {
+    [[LocalStore shared] saveBoolean:value key:key.keyLiteral];
 }
 
-+ (void)saveString:(NSString *)value key:(NSString *)key {
-    [[LocalStore shared] saveString:value key:key];
++ (void)saveString:(NSString *)value key:(id<DeCacheKey>)key {
+    [[LocalStore shared] saveString:value key:key.keyLiteral];
 }
 
-+ (void)saveFloat:(float)value key:(NSString *)key {
-    [[LocalStore shared] saveFloat:value key:key];
++ (void)saveFloat:(float)value key:(id<DeCacheKey>)key {
+    [[LocalStore shared] saveFloat:value key:key.keyLiteral];
+}
+
++ (NSInteger)getInt:(id<DeCacheKey>) key; {
+    return [[LocalStore shared] getInt:key.keyLiteral];
+}
+
++ (NSString*)getString:(id<DeCacheKey>) key; {
+    return [[LocalStore shared] getString:key.keyLiteral];
+}
+
++ (float)getFloat:(id<DeCacheKey>) key; {
+    return [[LocalStore shared] getFloat:key.keyLiteral];
 }
 
 @end

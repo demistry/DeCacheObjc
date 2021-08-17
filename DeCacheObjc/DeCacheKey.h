@@ -10,7 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol DeCacheKey <NSObject>
+
 @property (nonnull, strong) NSString* keyLiteral;
+
 @end
 
 NS_ASSUME_NONNULL_END
