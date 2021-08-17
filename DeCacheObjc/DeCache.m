@@ -21,6 +21,7 @@
     static DeCache *shared;
     
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
         shared = [[self alloc] init];
         shared.localStore = [[LocalStore alloc] init];
@@ -29,17 +30,20 @@
     return shared;
 }
 
-+ (void)setIntegerValue {
-    NSLog(@"Integer value set");
++(void) saveInt:(NSInteger)value key: (NSString*) key {
+    [[LocalStore shared] saveInt:value key:key];
 }
 
-//-(instancetype) init
-//{
-//    self = [super init];
-//    if (self) {
-//        self.localStore = [[LocalStore alloc] init];
-//    }
-//    return self;
-//}
++ (void)saveBoolean:(BOOL)value key:(NSString*)key {
+    [[LocalStore shared] saveBoolean:value key:key];
+}
+
++ (void)saveString:(NSString *)value key:(NSString *)key {
+    [[LocalStore shared] saveString:value key:key];
+}
+
++ (void)saveFloat:(float)value key:(NSString *)key {
+    [[LocalStore shared] saveFloat:value key:key];
+}
 
 @end

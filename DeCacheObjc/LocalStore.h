@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LocalStore : NSObject<Store>
-
++(nonnull instancetype) shared;
 @end
 
 NS_ASSUME_NONNULL_END

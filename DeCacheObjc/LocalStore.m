@@ -14,13 +14,19 @@
 
 @implementation LocalStore
 
-- (instancetype)init
++ (LocalStore*)shared
 {
-    self = [super init];
-    if (self) {
-        self.userDefaults = [NSUserDefaults standardUserDefaults];
-    }
-    return self;
+    //Singleton instance
+    static LocalStore *shared;
+    
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        shared = [[self alloc] init];
+        shared.userDefaults = [NSUserDefaults standardUserDefaults];
+    });
+    
+    return shared;
 }
 
 - (void)saveArray:(nonnull NSArray *)value key:(nonnull NSString *)key { 
